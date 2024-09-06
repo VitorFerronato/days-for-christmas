@@ -3,27 +3,29 @@
     class="flex-grow flex flex-col items-center justify-center text-center p-4"
   >
     <h1 class="text-4xl md:text-5xl font-extrabold mb-8 text-neon-red">
-      Dias para o Natal
+      Days until Christmas
     </h1>
     <div class="flex flex-wrap justify-center space-x-2 md:space-x-4">
       <div class="calendar-unit">
         <div class="time-value">{{ timeRemaining.days }}</div>
-        <div class="time-label">Dias</div>
+        <div class="time-label">Days</div>
       </div>
       <div class="calendar-unit">
         <div class="time-value">{{ timeRemaining.hours }}</div>
-        <div class="time-label">Horas</div>
+        <div class="time-label">Hours</div>
       </div>
       <div class="calendar-unit">
         <div class="time-value">{{ timeRemaining.minutes }}</div>
-        <div class="time-label">Minutos</div>
+        <div class="time-label">Min.</div>
       </div>
       <div class="calendar-unit">
         <div class="time-value">{{ timeRemaining.seconds }}</div>
-        <div class="time-label">Segundos</div>
+        <div class="time-label">Sec.</div>
       </div>
     </div>
-    <p class="text-base md:text-lg text-gray-500 mt-6">Prepare-se para as festas!</p>
+    <p class="text-base md:text-lg text-gray-500 mt-6">
+      Get ready for the gifts!
+    </p>
   </main>
 </template>
 
@@ -69,15 +71,19 @@ onUnmounted(() => {
 
 <style scoped>
 .calendar-unit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: #2d2d2d;
   color: white;
   border-radius: 16px;
   padding: 16px;
   width: 80px;
-  margin: 8px; 
-  border: 2px solid #ff1e56; 
-  box-shadow: 0 0 10px #ff1e56; 
-  text-shadow: 0 0 5px #ff1e56; 
+  margin: 8px;
+  border: 2px solid #ff1e56;
+  box-shadow: 0 0 10px #ff1e56;
+  text-shadow: 0 0 5px #ff1e56;
 }
 
 .time-value {
@@ -91,8 +97,8 @@ onUnmounted(() => {
 }
 
 h1 {
-  color: #ff1e56; 
-  text-shadow: 0 0 10px #ff1e56; 
+  color: #ff1e56;
+  text-shadow: 0 0 10px #ff1e56;
 }
 
 .text-neon-red {
@@ -115,12 +121,13 @@ h1 {
 }
 
 @media (prefers-color-scheme: dark) {
-  h1, .calendar-unit {
+  h1,
+  .calendar-unit {
     color: white;
   }
 
   .calendar-unit {
-    background-color: #1a1a1a; 
+    background-color: #1a1a1a;
   }
 }
 </style>

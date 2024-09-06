@@ -6,7 +6,7 @@
   >
     <Header :isDarkMode="isDarkMode" @toggleDarkMode="toggleDarkMode" />
     <Countdown />
-     <p class="text-base md:text-sm text-gray-500 text-center">Made with &#x2764;&#xfe0f;, by Vitor Ferronato</p>
+     <p class="text-base text-sm text-gray-500 text-center">Made with &#x2764;&#xfe0f;, by Vitor Ferronato</p>
   </div>
 </template>
 
